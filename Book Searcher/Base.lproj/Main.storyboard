@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wON-WA-m8i">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -8,20 +8,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Book Searcher-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Book_Searcher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fla-mN-SG5">
+                                <rect key="frame" x="2" y="88" width="410" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JlY-A2-DS4">
+                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JlY-A2-DS4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Epd-hi-Fwi"/>
+                            <constraint firstItem="fla-mN-SG5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nt0-hY-Trv"/>
+                            <constraint firstItem="JlY-A2-DS4" firstAttribute="top" secondItem="fla-mN-SG5" secondAttribute="bottom" id="SXp-jK-Hxw"/>
+                            <constraint firstItem="fla-mN-SG5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="g7j-C2-NrO"/>
+                            <constraint firstItem="JlY-A2-DS4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gTz-bD-o5z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fla-mN-SG5" secondAttribute="trailing" constant="2" id="mC6-QC-7g6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JlY-A2-DS4" secondAttribute="trailing" id="vox-FL-Dtn"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Book Searcher" id="u7T-Fv-Uav"/>
+                    <connections>
+                        <outlet property="searchBar" destination="fla-mN-SG5" id="BTo-wr-3pa"/>
+                        <outlet property="tableView" destination="JlY-A2-DS4" id="aCP-bh-FEd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.399999999999999" y="81.409295352323838"/>
+            <point key="canvasLocation" x="927.536231884058" y="81.026785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AAE-xc-QGn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wON-WA-m8i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VMq-Nu-ItM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Zw-zW-wBE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYe-v8-rxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.39130434782609" y="81.026785714285708"/>
         </scene>
     </scenes>
     <resources>
