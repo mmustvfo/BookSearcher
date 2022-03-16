@@ -13,14 +13,17 @@ class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+    var books: [Book] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.delegate = self
     }
 
-    private func moveToDetail() {
-        let vc = DetailViewController()
+    private func moveToDetail(book: Book) {
+        //Navigate to DetailViewController
+        let vc = DetailViewController(book: book)
         navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -34,8 +37,10 @@ extension ViewController: UISearchBarDelegate {
     
     @objc private func reload() {
         guard let text = searchBar.text else {
+            print("Couldn't get search text.")
             return
         }
+        //Make a request
     }
     
 }
@@ -43,7 +48,7 @@ extension ViewController: UISearchBarDelegate {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Return count of books
-        return 20
+        return books.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,7 +63,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 class BookTapGestureRecognizer: UITapGestureRecognizer {
     
-    init(target: Any?,action: Selector, book: Any) {
+    init(target: Any?,action: Selector, book: QueryResult) {
         super.init(target: target, action: action)
     }
     
