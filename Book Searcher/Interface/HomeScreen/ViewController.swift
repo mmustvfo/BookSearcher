@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.register(UINib(nibName: "BookCell", bundle: .main), forCellReuseIdentifier: BookCell.identifier)
+        
         searchBar.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     private func moveToDetail(book: Book) {
@@ -48,23 +52,20 @@ extension ViewController: UISearchBarDelegate {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Return count of books
-        return books.count
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Create cell
         
-        //Add a tap gesture recognizer
-        return UITableViewCell()
-    }
+        let cell = tableView.dequeueReusableCell(withIdentifier: BookCell.identifier, for: indexPath) as! BookCell
         
-}
-
-
-class BookTapGestureRecognizer: UITapGestureRecognizer {
-    
-    init(target: Any?,action: Selector, book: QueryResult) {
-        super.init(target: target, action: action)
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 144
+    }
+            
 }
+

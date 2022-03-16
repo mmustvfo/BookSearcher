@@ -20,8 +20,8 @@
                                 <rect key="frame" x="2" y="88" width="410" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JlY-A2-DS4">
-                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JlY-A2-DS4">
+                                <rect key="frame" x="0.0" y="134" width="414" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -50,7 +50,6 @@
         <!--Navigation Controller-->
         <scene sceneID="AAE-xc-QGn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYe-v8-rxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wON-WA-m8i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VMq-Nu-ItM">
@@ -62,6 +61,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Zw-zW-wBE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYe-v8-rxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="17.39130434782609" y="81.026785714285708"/>
         </scene>
