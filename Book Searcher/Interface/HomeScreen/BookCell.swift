@@ -9,11 +9,12 @@ import UIKit
 import Kingfisher
 
 class BookCell: UITableViewCell {
+    
     @IBOutlet var thumbnailImage: UIImageView!
     
     @IBOutlet var bookName: UILabel!
     
-    @IBOutlet var bookAuthor: UILabel!
+    @IBOutlet var authorLabel: UILabel!
     
     static let identifier = "BookCell"
     
@@ -26,6 +27,7 @@ class BookCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        bookName.text = "Juliana"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,9 +40,16 @@ class BookCell: UITableViewCell {
         guard let book = book else {
             return
         }
+        thumbnailImage.kf.setImage(
+            with: book.volumeInfo.smallImageLink,
+            placeholder: UIImage(systemName: "slowmo"),
+            options: [
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
         bookName.text = book.volumeInfo.title
-        bookAuthor.text = book.volumeInfo.authors.joined(separator: ",")
-        thumbnailImage.kf.setImage(with: URL(string: book.volumeInfo.imageLinks.smallThumbnail),options: [.cacheOriginalImage])
+        authorLabel.text = book.volumeInfo.authors?.joined(separator: ",") ?? ""
     }
 
 }
