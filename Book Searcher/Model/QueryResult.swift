@@ -54,6 +54,15 @@ struct VolumeInfo: Codable {
         components?.scheme = "https"
         return components?.url
     }
+    
+    var bigImageLink: URL? {
+        guard let imageLinks = imageLinks else {
+            return nil
+        }
+        var components = URLComponents(string: imageLinks.thumbnail)
+        components?.scheme = "https"
+        return components?.url
+    }
 }
 
 // MARK: - ImageLinks
