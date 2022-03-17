@@ -9,23 +9,22 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    let book: Book
+    var book: Book? {
+        didSet {
+            configure()
+        }
+    }
 
-    init(book: Book) {
-        self.book = book
-        super.init()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
         // Do any additional setup after loading the view.
     }
     
+    private func configure() {
+        
+    }
 
     /*
     // MARK: - Navigation
