@@ -25,25 +25,34 @@ struct Book: Codable {
 
 // MARK: - VolumeInfo
 struct VolumeInfo: Codable {
-    let title: String
-    let authors: [String]
-    let publisher, publishedDate, volumeInfoDescription: String
-    let pageCount: Int
-    let printType: PrintType
-    let categories: [String]
-    let maturityRating: MaturityRating
-    let allowAnonLogging: Bool
-    let contentVersion: String
-    let imageLinks: ImageLinks
-    let previewLink: String
-    let infoLink: String
-    let canonicalVolumeLink: String
+    let title: String?
+    let authors: [String]?
+    let publisher, publishedDate, volumeInfoDescription: String?
+    let pageCount: Int?
+    let printType: PrintType?
+    let categories: [String]?
+    let maturityRating: MaturityRating?
+    let allowAnonLogging: Bool?
+    let contentVersion: String?
+    let imageLinks: ImageLinks?
+    let previewLink: String?
+    let infoLink: String?
+    let canonicalVolumeLink: String?
     let subtitle: String?
 
     enum CodingKeys: String, CodingKey {
         case title, authors, publisher, publishedDate
         case volumeInfoDescription = "description"
         case pageCount, printType, categories, maturityRating, allowAnonLogging, contentVersion, imageLinks, previewLink, infoLink, canonicalVolumeLink, subtitle
+    }
+    
+    var smallImageLink: URL? {
+        guard let imageLinks = imageLinks else {
+            return nil
+        }
+        var components = URLComponents(string: imageLinks.smallThumbnail)
+        components?.scheme = "https"
+        return components?.url
     }
 }
 
