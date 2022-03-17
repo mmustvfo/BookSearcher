@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BookCell: UITableViewCell {
     @IBOutlet var thumbnailImage: UIImageView!
@@ -18,11 +19,7 @@ class BookCell: UITableViewCell {
     
     var book: Book? {
         didSet {
-            guard let book = book else {
-                return
-            }
-            bookName.text = book.volumeInfo.title
-            bookAuthor.text = book.volumeInfo.authors.joined(separator: ",")
+            configure()
         }
     }
     
@@ -35,6 +32,15 @@ class BookCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func configure() {
+        guard let book = book else {
+            return
+        }
+        bookName.text = book.volumeInfo.title
+        bookAuthor.text = book.volumeInfo.authors.joined(separator: ",")
+        thumbnailImage.kf.setImage(with: URL(string: book.volumeInfo.imageLinks.smallThumbnail),options: [.cacheOriginalImage])
     }
 
 }

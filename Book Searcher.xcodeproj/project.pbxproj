@@ -12,6 +12,7 @@
 		C612F3CE27E22DED003BF566 /* BooksAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612F3CD27E22DED003BF566 /* BooksAPIManager.swift */; };
 		C6470F2427E24A8E00AFBE8D /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6470F2327E24A8D00AFBE8D /* BookCell.xib */; };
 		C6470F2A27E26BC200AFBE8D /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6470F2927E26BC200AFBE8D /* BookCell.swift */; };
+		C6470F2D27E2748D00AFBE8D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C6470F2C27E2748D00AFBE8D /* Kingfisher */; };
 		C662747327E0FAD500C7BA7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662747227E0FAD500C7BA7F /* AppDelegate.swift */; };
 		C662747527E0FAD500C7BA7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662747427E0FAD500C7BA7F /* SceneDelegate.swift */; };
 		C662747727E0FAD500C7BA7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662747627E0FAD500C7BA7F /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6470F2D27E2748D00AFBE8D /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +84,15 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
+		C6470F2E27E2773800AFBE8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C662747227E0FAD500C7BA7F /* AppDelegate.swift */,
+				C662747427E0FAD500C7BA7F /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C662746627E0FAD500C7BA7F = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +112,10 @@
 		C662747127E0FAD500C7BA7F /* Book Searcher */ = {
 			isa = PBXGroup;
 			children = (
+				C6470F2E27E2773800AFBE8D /* Resources */,
 				C6470F2727E26B1000AFBE8D /* Interface */,
 				C612F3CC27E22DD0003BF566 /* Services */,
 				C612F3C927E1E65F003BF566 /* Model */,
-				C662747227E0FAD500C7BA7F /* AppDelegate.swift */,
-				C662747427E0FAD500C7BA7F /* SceneDelegate.swift */,
 				C662747B27E0FAD600C7BA7F /* Assets.xcassets */,
 				C662747D27E0FAD600C7BA7F /* LaunchScreen.storyboard */,
 				C662748027E0FAD600C7BA7F /* Info.plist */,
@@ -130,6 +140,9 @@
 			dependencies = (
 			);
 			name = "Book Searcher";
+			packageProductDependencies = (
+				C6470F2C27E2748D00AFBE8D /* Kingfisher */,
+			);
 			productName = "Book Searcher";
 			productReference = C662746F27E0FAD500C7BA7F /* Book Searcher.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +171,9 @@
 				Base,
 			);
 			mainGroup = C662746627E0FAD500C7BA7F;
+			packageReferences = (
+				C6470F2B27E2748D00AFBE8D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C662747027E0FAD500C7BA7F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6470F2B27E2748D00AFBE8D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6470F2C27E2748D00AFBE8D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6470F2B27E2748D00AFBE8D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C662746727E0FAD500C7BA7F /* Project object */;
 }

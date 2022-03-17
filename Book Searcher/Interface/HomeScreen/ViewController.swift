@@ -59,12 +59,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         //Create cell
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BookCell.identifier, for: indexPath) as! BookCell
-        
+        //cell.book = books[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Navigate to detail screen
+        //moveToDetail(book: books[indexPath.row])
     }
             
 }

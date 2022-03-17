@@ -33,11 +33,13 @@ class BooksAPIManager {
         }
     }
     
-    public func makeRequest(for query: String) {
+    public func makeRequest(for query: String,completion: @escaping(Result<QueryResult,Error>)-> Void) {
         
         guard let url = generateURL(for: query) else {
             print("URL INVALID")
-                  return }
+            completion(.failure(BooksAPIError.invalidURL))
+            return
+        }
         
         let dataTask = defaultSession.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
@@ -45,7 +47,7 @@ class BooksAPIManager {
                 return
             }
             if let book = try? JSONDecoder().decode(QueryResult.self, from: data) {
-                print("GOTTEN")
+                completion(.success(book))
                 print("Count: \(book.items.count)")
             } else {
                 print("COULDN'T PARSE")
