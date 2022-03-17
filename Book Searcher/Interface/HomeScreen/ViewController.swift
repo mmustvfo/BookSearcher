@@ -45,6 +45,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            self.books = []
+        }
         //Throttle,
         self.perform(#selector(reload), with: nil, afterDelay: 0.5)
     }
