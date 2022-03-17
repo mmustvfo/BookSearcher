@@ -14,6 +14,7 @@
 		C6470F2D27E2748D00AFBE8D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C6470F2C27E2748D00AFBE8D /* Kingfisher */; };
 		C6470F3427E34DB400AFBE8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6470F3227E34DB400AFBE8D /* DetailViewController.swift */; };
 		C6470F3527E34DB400AFBE8D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6470F3327E34DB400AFBE8D /* DetailViewController.xib */; };
+		C6470F3D27E354AE00AFBE8D /* Book_SearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6470F3C27E354AE00AFBE8D /* Book_SearcherTests.swift */; };
 		C662747327E0FAD500C7BA7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662747227E0FAD500C7BA7F /* AppDelegate.swift */; };
 		C662747527E0FAD500C7BA7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662747427E0FAD500C7BA7F /* SceneDelegate.swift */; };
 		C662747727E0FAD500C7BA7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662747627E0FAD500C7BA7F /* ViewController.swift */; };
@@ -22,6 +23,16 @@
 		C662747F27E0FAD600C7BA7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C662747D27E0FAD600C7BA7F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C6470F3E27E354AE00AFBE8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C662746727E0FAD500C7BA7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C662746E27E0FAD500C7BA7F;
+			remoteInfo = "Book Searcher";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C612F3CA27E1E668003BF566 /* QueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResult.swift; sourceTree = "<group>"; };
 		C612F3CD27E22DED003BF566 /* BooksAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPIManager.swift; sourceTree = "<group>"; };
@@ -29,6 +40,8 @@
 		C6470F2927E26BC200AFBE8D /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		C6470F3227E34DB400AFBE8D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C6470F3327E34DB400AFBE8D /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		C6470F3A27E354AE00AFBE8D /* Book SearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book SearcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6470F3C27E354AE00AFBE8D /* Book_SearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_SearcherTests.swift; sourceTree = "<group>"; };
 		C662746F27E0FAD500C7BA7F /* Book Searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C662747227E0FAD500C7BA7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C662747427E0FAD500C7BA7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C6470F3727E354AE00AFBE8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C662746C27E0FAD500C7BA7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,10 +125,19 @@
 			path = DetailScreen;
 			sourceTree = "<group>";
 		};
+		C6470F3B27E354AE00AFBE8D /* Book SearcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6470F3C27E354AE00AFBE8D /* Book_SearcherTests.swift */,
+			);
+			path = "Book SearcherTests";
+			sourceTree = "<group>";
+		};
 		C662746627E0FAD500C7BA7F = {
 			isa = PBXGroup;
 			children = (
 				C662747127E0FAD500C7BA7F /* Book Searcher */,
+				C6470F3B27E354AE00AFBE8D /* Book SearcherTests */,
 				C662747027E0FAD500C7BA7F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				C662746F27E0FAD500C7BA7F /* Book Searcher.app */,
+				C6470F3A27E354AE00AFBE8D /* Book SearcherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +168,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C6470F3927E354AE00AFBE8D /* Book SearcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6470F4027E354AE00AFBE8D /* Build configuration list for PBXNativeTarget "Book SearcherTests" */;
+			buildPhases = (
+				C6470F3627E354AE00AFBE8D /* Sources */,
+				C6470F3727E354AE00AFBE8D /* Frameworks */,
+				C6470F3827E354AE00AFBE8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6470F3F27E354AE00AFBE8D /* PBXTargetDependency */,
+			);
+			name = "Book SearcherTests";
+			productName = "Book SearcherTests";
+			productReference = C6470F3A27E354AE00AFBE8D /* Book SearcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C662746E27E0FAD500C7BA7F /* Book Searcher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C662748327E0FAD600C7BA7F /* Build configuration list for PBXNativeTarget "Book Searcher" */;
@@ -168,6 +216,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					C6470F3927E354AE00AFBE8D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C662746E27E0FAD500C7BA7F;
+					};
 					C662746E27E0FAD500C7BA7F = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -190,11 +242,19 @@
 			projectRoot = "";
 			targets = (
 				C662746E27E0FAD500C7BA7F /* Book Searcher */,
+				C6470F3927E354AE00AFBE8D /* Book SearcherTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C6470F3827E354AE00AFBE8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C662746D27E0FAD500C7BA7F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +270,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C6470F3627E354AE00AFBE8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6470F3D27E354AE00AFBE8D /* Book_SearcherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C662746B27E0FAD500C7BA7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +293,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6470F3F27E354AE00AFBE8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C662746E27E0FAD500C7BA7F /* Book Searcher */;
+			targetProxy = C6470F3E27E354AE00AFBE8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C662747827E0FAD500C7BA7F /* Main.storyboard */ = {
@@ -246,6 +322,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C6470F4127E354AE00AFBE8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XCNW7FHCUP;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mmustvfo.Book-SearcherTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Book Searcher.app/Book Searcher";
+			};
+			name = Debug;
+		};
+		C6470F4227E354AE00AFBE8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XCNW7FHCUP;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mmustvfo.Book-SearcherTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Book Searcher.app/Book Searcher";
+			};
+			name = Release;
+		};
 		C662748127E0FAD600C7BA7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -421,6 +543,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C6470F4027E354AE00AFBE8D /* Build configuration list for PBXNativeTarget "Book SearcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6470F4127E354AE00AFBE8D /* Debug */,
+				C6470F4227E354AE00AFBE8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C662746A27E0FAD500C7BA7F /* Build configuration list for PBXProject "Book Searcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
